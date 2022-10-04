@@ -1,0 +1,391 @@
+<!doctype html>
+<html>
+<head>
+    <title>Assignment Name</title>
+    <link rel="stylesheet" href="index.css">
+    <meta name="description" content="my assignment write up">
+
+    <style>
+        body {
+            font-family: "Helvetica Neue", Arial, sans-serif;
+            
+
+        }
+
+        p{
+            padding-left: 30px;
+        }
+
+        h1 {
+            font-weight: bold;
+            font-size: 20px;
+            letter-spacing: 2px;
+            text-align: center;
+            color: #ffffff;
+            
+        }
+
+        h2 {
+            display: grid;
+            grid-template-columns: minmax(20px, 1fr) auto minmax(20px, 1fr);
+            align-items: center;
+            text-align: center;
+            grid-gap: 20px;
+            width: 100%;
+
+            background: linear-gradient(to right, rgb(128, 55, 197), rgb(44, 133, 185), rgb(239, 181, 110));
+            background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+        }
+
+        h2:before,
+        h2:after {
+            content: '';
+            border-top: 2px solid rgb(31, 68, 128);
+        }
+
+        h3{
+            font-size: 14px;
+            font-weight: bold;
+            color: rgb(125, 168, 206);
+        }
+
+        h4{
+            font-size: 4rem;
+            line-height: 100%;
+            background: linear-gradient(to right, rgb(128, 55, 197), rgb(126, 182, 222), rgb(230, 179, 116));
+            background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            
+            
+            vertical-align: center;
+            justify-content: center;
+            margin-top: 100px;
+        }
+
+        h5{
+            font-size: 12px;
+            color:#6f6f6f;
+            font-style: italic;
+            font-weight: normal;
+            margin-top: -40px;
+        }
+
+        ul {
+            list-style-position: outside;
+            margin-top: 10px;
+            font-size: 10px;
+            color:#6f6f6f;
+           
+        }
+
+        
+
+        li{
+            margin-top: -5px;
+
+        }
+
+        
+
+        .navbar {
+          
+            padding-bottom: 50px;
+            
+            
+            left: 50%;
+            transform: translate(-50%, 0);
+            width: 98%;
+            position: fixed;
+
+            border-radius: 10px;
+
+            background-image: linear-gradient(to right, rgb(128, 55, 197), rgb(126, 182, 222), rgb(230, 179, 116));
+
+            z-index: 999;
+            -webkit-transition: all 0.3s;
+                -moz-transition: all 0.3s;
+                -ms-transition: all 0.3s;
+                -o-transition: all 0.3s;
+                transition: all 0.3s;
+        }
+
+        .navigation {
+            left: 50%;
+            transform: translate(-50%, 0);
+            
+            width: auto;
+            position: absolute;
+            
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* SCROLLBAR */
+
+        ::-webkit-scrollbar-thumb:vertical {
+            background: rgb(216, 172, 83);
+            border-radius: 15px;
+            height: 50px;
+        }
+
+        ::-webkit-scrollbar {
+            height: 10px;
+            width: 7px;
+            background: rgb(255, 255, 255);
+        }
+
+        .container{
+            margin:0 auto;
+            margin-top: 0px;
+            width: auto;
+            height: auto !important;  
+        }
+
+        .content{
+            padding:30px;
+            padding-right: 90px;
+            padding-left: 90px;
+            width: 100;
+            height: auto;
+            
+            line-height:150%;
+            font-weight:400;
+            font-family: "Helvetica Neue", Arial, sans-serif;
+            font-size: 14px;
+            letter-spacing: .5px;
+            text-align: left;
+
+            display: block;
+            position: relative;
+            overflow: hidden;
+
+            justify-content: center;
+            align-items: center;
+
+            background-color: #ffffff;
+            border-radius: 10px;
+            border: solid 2px #e0e0e0;
+
+            margin-bottom: 20px;
+            margin-right: 5px;
+            margin-left: 5px;
+        }
+
+       
+
+        img.left {
+            float: left;
+            margin: 10px 20px 10px 0;
+            height: 500px;
+            margin-right: 40px;
+        }
+
+        img.left-main {
+            float: left;
+            margin: 10px 20px 10px 0;
+            margin-right: 100px;
+            height: 80vh;
+            margin-top: 50px;
+          
+        }
+
+        img.right {
+            float: right;
+            margin: 10px 20px 10px 0;
+            height: 500px;
+            margin-left: 40px;
+        }
+
+        #right{
+            float: right;
+            margin: 10px 20px 10px 0;
+            margin-left: 40px;
+            margin-right: 150px;
+        }
+
+        img.center-split {
+            
+            width: 40vw;
+            display: inline;
+        }
+
+        img.center {
+            margin: auto;
+            max-width: 70vw;
+            display: block;
+        }
+
+    </style>
+
+</head>
+    <body>
+        <div class="navbar">
+            <div class="navigation"><h1>PERSONAS AND STORYBOARDS</h1>
+            </div>
+        </div>
+       
+        <div class="container">
+            <div class = "content">
+                <img class="left-main" src="laundry.png"/>
+                <h4>INTERFACE: BROWN WASHING MACHINE</h4>
+                <h5>The laundry machines in Brown dorms allow students to wash and dry
+                    their clothes. The key components to the washing machine are: a door that opens on the face of the machine -- Once the machine begins a cycle, 
+                            the door will remain locked until the end of the cycle; buttons that allow one to select soil level: LIGHT, MEDIUM, HEAVY; 
+                            type of clothes: NORMAL, DELICATES/BULKY; temperature: HOT, WARM, COLD; a green start button to begin the cycle; a digital timer to display 
+                            time left in cycle; a soap tray to place liquid detergent only.
+                        </li>
+                        
+                    </ul>
+                </h5>
+            </div>
+            
+            <div class="content">
+                <h2>INTERFACE QUESTIONS </h2>
+                <br><br>
+                <ol type ="1">
+                    <h3><li>Why are you using this machine? </li></h3>
+                    <ul>
+                        <li> Need to do laundry</li>
+                        <li>Free right now, and even if we had to pay, 
+                            it’s cheaper than buying my own washing machine 
+                            or going to a laundromat</li>
+                        <li> More convenient than handwashing</li>
+                        <li> No other market for other washing machines </li>
+                    </ul>
+
+                    <h3><li> What can you do on this machine? </li></h3>
+                    <ul>
+                        <li> Open the door</li>
+                        <li>Put soap in soap tray</li>
+                        <li> See the different options for the wash cycles</li>
+                        <li> Press buttons</li>
+                        <li>View the timer for how long is left in the cycle</li>
+                    </ul>
+
+                    <h3><li> How can you tell this machine is unoccupied/available?  </li></h3>
+                    <ul>
+                        <li> There are no clothes in the machine when you look into the glass or open the door</li>
+                        <li> There is no number displayed on the screen</li>
+                        <li>  It is not making any noises or vibrating when you put your hand on it</li>
+                        <li> Press buttons</li>
+                        
+                    </ul>
+
+                    <h3><li>How much (clothes) can you put in this machine? 
+                        Typically, do you feel that you’re putting too much, 
+                        too little, or not sure?</li></h3>
+                        <ul>
+                            <li> I feel like too little, because I seperate my 
+                                whites and darks – if I had to pay, I would
+                                 probably feel like I’m wasting my money </li>
+                            <li> I don’t know what “too much” is when they 
+                                say not to fill “too much”, but as long as my 
+                                clothes are washing normally then it feels okay</li>
+                            <li> Generally try to put in as much as I can 
+                                while leaving around ¼ of the space at the top</li>      
+                        </ul>
+
+                    <h3><li>How do you start the machine? </li></h3>
+                        <ul>
+                            <li>  Select the type of cycle and press start </li>    
+                        </ul>
+
+                    <h3><li>How do you know which buttons to press? Do you know what the buttons/settings mean? </li></h3>
+                        <ul>
+                            <li> The washing machines are pretty clearly labeled, 
+                                but I don’t necessarily know what the settings mean </li>
+                            <li> Read the directions at the top</li>
+                            <li> I know what the settings mean with these 
+                                new machines more than last year</li>   
+                            <li>You are able to see the different heat levels 
+                                and the types of clothes that you put into the washer</li>   
+                        </ul>
+                    <h3><li>How do you know that the machine has started?</li></h3>
+                        <ul>
+                            <li>Makes noises </li>
+                            <li>Starts spinning</li>
+                            <li>The timer starts on the screen</li>   
+                            <li>Door clicks </li>   
+                        </ul>
+                    <h3><li>When the machine has started, what do you do? 
+                        Are you able to open the door while it’s still running? </li></h3>
+                        <ul>
+                            <li> After it starts, I go back to my room and set my own timer on phone </li>
+                            <li> Door is locked and you can’t open it</li>
+                            <li> No way to stop the cycle early or manually pause the cycle</li>   
+                        </ul>
+                    <h3><li>What tells you your clothes have finished washing?  </li></h3>
+                        <ul>
+                            <li> Timer on my phone goes off </li>
+                            <li>  Look at the clock every 5 minutes</li>
+                            <li>  The timer on the machine goes to 0 and the machine isn’t moving anymore</li>  
+                            <li> The door is no longer locked</li> 
+                        </ul>
+                    <h3><li> Do you know how long it’s been since your clothes 
+                        were ready? Since another person’s clothes were ready?  </li></h3>
+                        <ul>
+                            <li> There is no way to tell – the timer either 
+                                says 0 or nothing, so there’s no way to tell 
+                                how long a person’s wet clothes have been sitting 
+                                there and occupying the machine  </li>
+                            <li> I’m afraid of taking another person’s clothes 
+                                out when they just finished washing, but would 
+                                be more comfortable with it if they’ve been 
+                                sitting there for hours</li>
+                        </ul>
+                    <h3><li> How often do you need to change the default setting 
+                        for the buttons? If/when you do, why do you change them?  </li></h3>
+                        <ul>
+                            <li>  I use the same default setting every time because it works for me </li>
+                            <li>I change the settings every time, increasing detergent and temperature, so that my clothes are especially clean when they come out</li>
+                            <li>  Seems like you can’t change them after you press start</li>
+                        </ul>
+                    <h3><li> What do you think this machine can do better? </li></h3>
+                        <ul>
+                            <li> The machine could allow more chances to pause in the middle</li>
+                            <li> Sometimes I forget to put in detergent, so I would have to run the cycle again after it finishes because I can’t open the door preemptively </li>
+                            <li> The machine could use more water, because multiple instances I feel like the my tide pod isn’t melting enough so there are still bits and pieces around my laundry after the cycle </li>
+                        </ul>
+                   <h3><li>What do you find inconvenient about this machine?</li></h3> 
+                        <ul>
+                            <li> It’s hard to tell where the detergent goes, because the labels are so faint</li>
+                            <li> You can’t open the door during the cycle </li>
+                            
+                        </ul>
+                    <h3><li>If you were in a wheelchair, would you feel confident 
+                        that you could still operate/start this machine? </li></h3>
+                        <ul>
+                            <li> I do not think I would be able to press the buttons because they’re pretty far back</li>
+                            <li> Must navigate around the door that opens from the side, and sometimes there’s no room to navigate  </li>
+                            <li> Transfer from washer to dryer would be particularly difficult</li>
+                            <li> There is also no braille for visually impaired individuals </li>
+                            
+                        </ul>
+
+                </ol>
+            
+                
+            </div>
+            <div class="content">
+                <h2>PERSONAS </h2>
+                <br>
+                <img class="center-split" src="forgetful francis.png"/>
+                <img class="center-split" src="hurried harold.png"/>
+            </div>
+
+            <div class="content">
+                <h2>STORYBOARDS</h2>
+                <br><br><h5 style="justify-content: center; align-items: center; text-align: center;">Hurried Harold in a rush to clean his clothes</h5>
+                <img class="center" src="storyboard.png"/>
+            </div>
+       
+        </div>
+       
+           
+       
+    </body>
+</html>
